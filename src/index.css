@@ -67,14 +67,25 @@ body {
   width: 8em;
 }
 
+#button-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 i {
   padding: 0 0.5em;
   color: var(--accent);
 }
 
-i:hover {
+.icon:hover, #start-stop:hover > * {
   cursor: pointer;
   color: var(--interior);
+}
+
+#start-stop > * {
+  padding: 0;
+  margin: 0;
 }
 
 h1, h2, h3 {
