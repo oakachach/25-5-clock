@@ -1,3 +1,11 @@
+:root {
+  --font: #000000;
+  --accent: #baa898;
+  --line: #839788;
+  --interior: #eee0cb;
+  --background: #bfd7ea;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +13,71 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  background-color: var(--background);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  font-size: 1.5em;
+  text-align: center;
+  color: var(--font);
+  overflow: hidden;
+  
 }
+
+#container {
+  width: 18em;
+  height: 18em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#interval-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#interval-section > * {
+  padding: 0 0.5em;
+}
+
+.interval-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#clock-section {
+  border: 4px solid var(--line);
+  background-color: var(--interior);
+  border-radius: 15px;
+  width: 8em;
+}
+
+i {
+  padding: 0 0.5em;
+  color: var(--accent);
+}
+
+i:hover {
+  cursor: pointer;
+  color: var(--interior);
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
