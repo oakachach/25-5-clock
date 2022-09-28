@@ -53,6 +53,7 @@ const TimerLabel = () => {
 
 const TimeLeft = () => {
     const timeLeft = useSelector((state) => state.timer.timeLeft);
+    // const isRunning = useSelector((state) => state.timer.isRunning)
 
     return(
         <>
@@ -71,13 +72,15 @@ export const Clock =() => {
 }
 
 export const Buttons = () => {
+    const dispatch = useDispatch();
+
     return(
         <div id='button-section'>
-        <div className='icon' id='start-stop'>
+        <div onClick={ () => dispatch(startStop())} className='icon' id='start-stop'>
             <i className="fa-solid fa-play"></i>
             <i className="fa-solid fa-pause"></i>
         </div>
-        <i className="fa-solid fa-rotate icon" id='reset'></i>
+        <i onClick={ () => dispatch(resetTimer())} className="fa-solid fa-rotate icon" id='reset'></i>
         </div>
     );
 }
